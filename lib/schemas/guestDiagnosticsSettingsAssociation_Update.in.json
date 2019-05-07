@@ -1,0 +1,42 @@
+{
+    "type": "object",
+    "properties": {
+        "resourceUri": {
+            "required": true,
+            "type": "string"
+        },
+        "associationName": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Guest diagnostic setting resource for patch operations",
+            "properties": {
+                "properties": {
+                    "description": "The service diagnostics settings for an update operation.",
+                    "x-ms-client-flatten": true,
+                    "properties": {
+                        "guestDiagnosticSettingsName": {
+                            "description": "The guest diagnostic settings name.",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "guestDiagnosticSettingsName"
+                    ]
+                },
+                "tags": {
+                    "additionalProperties": {
+                        "type": "string"
+                    },
+                    "description": "Resource tags"
+                }
+            },
+            "type": "object"
+        },
+        "api_version": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}
